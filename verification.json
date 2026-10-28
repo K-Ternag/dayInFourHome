@@ -1,0 +1,10 @@
+{
+  "browser": "incomplete",
+  "checks": [
+    "6 HTML pages: 165 local references and anchors passed",
+    "app.js syntax passed",
+    "build_site.py syntax passed"
+  ],
+  "reason": "[WinError 5] 액세스가 거부되었습니다",
+  "visual_review": "Not completed: browser process blocked by environment permissions (WinError 5)."
+}
