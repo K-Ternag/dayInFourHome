@@ -1,12 +1,22 @@
 # 네컷일기 / Day in Four 홈페이지
 
-빌드 없이 GitHub Pages에서 제공하는 한국어 정적 홈페이지입니다. 실제 앱 이미지와 PDF 예시를 사용합니다. HTML 본문은 JavaScript 없이도 읽을 수 있습니다. 서버·추적 스크립트·외부 폰트·쿠키를 추가하지 않았습니다.
+빌드 없이 GitHub Pages에서 제공하는 한국어·영어 정적 홈페이지입니다. 실제 앱 이미지와 PDF 예시를 사용합니다. HTML 본문은 JavaScript 없이도 읽을 수 있습니다. 서버·추적 스크립트·외부 폰트·쿠키를 추가하지 않았습니다.
 
 ## 위치와 실행
 
-요청 위치는 `D:\Projects\foutFoldHome`입니다. 현재 세션에서는 이 경로가 쓰기 허용 범위 밖이므로 `D:\Projects\fourFold\foutFoldHome`에 준비했습니다. 폴더 전체를 요청 위치로 복사해 독립 저장소로 사용할 수 있습니다. 기존 앱 소스는 변경하지 않았습니다.
+프로젝트 위치는 `D:\Projects\foutFoldHome`입니다. 기존 앱 소스와 독립된 홈페이지 저장소입니다.
 
 `index.html`을 열거나 폴더에서 `python -m http.server 8080`을 실행하고 `http://localhost:8080`으로 접속하세요.
+
+## 한국어·영어
+
+한국어 시작 페이지는 `index.html`, 영어 시작 페이지는 `index.en.html`입니다. 소개·갤러리·고객지원·개인정보처리방침·삭제 안내·이용약관을 각각 제공합니다. 상단의 한국어 / EN 링크는 같은 페이지와 검색 분류·앵커를 유지합니다. 언어 전환에는 로그인이나 쿠키가 필요하지 않습니다. 언어별 검색 메타데이터와 `hreflang` 링크도 포함합니다.
+
+`build_english.py`에서 영문 문구를 관리합니다. 한국어 HTML을 수정한 뒤 `python build_english.py`를 실행하면 영어 페이지와 양쪽 언어 링크를 다시 생성합니다. `build_site.py`로 전체를 재생성할 때도 자동 호출됩니다. 생성된 `.en.html`을 직접 수정하면 다음 생성 때 덮어씁니다. 이미지의 UI·예시 일기와 PDF는 원본을 공유하므로 일부 한국어가 포함되어 있으며 영문 페이지에 안내합니다.
+
+운영 정보의 영어 안내는 `site-config.js`의 `localized.en`에서 설정합니다. `deletionTimeframe`, `retentionPolicy`, `processingRegion`의 영어 값이 비어 있으면 한국어 운영 문구로 대체하지 않고 영문 검토본 안내를 유지합니다. 연락처·운영자명·시행일·스토어 URL은 공통 설정을 사용합니다.
+
+검증: `python verify_site.py`는 12개 페이지의 경로·앵커·언어 링크와 영문 번역 누락을 검사합니다. `node test_localization.cjs`는 공유 스크립트의 언어별 이미지·운영 설정·영문 메일 작성을 검사합니다. `python browser_check.py`는 양쪽 언어의 반응형 화면과 실제 브라우저 상호작용을 검사합니다. 브라우저 실행이 차단된 환경에서는 그 한계를 `verification.json`에 기록합니다.
 
 ## 페이지
 

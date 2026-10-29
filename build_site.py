@@ -54,3 +54,7 @@ page('terms.html','이용약관',f'''<article class="wrap legal"><span class="ey
 page('support.html','고객지원','''<article class="wrap legal"><span class="eyebrow">HERE TO HELP</span><h1>무엇을 도와드릴까요?</h1><p class="lead">소중한 기록을 편하게 남길 수 있도록.<br>네컷일기 사용과 데이터 관리에 관한 안내입니다.</p><div class="notice"><h2 style="margin-top:0">앱 사용 문의</h2><p>지원 이메일: <span data-contact>출시 전 지원 연락처 준비 중</span></p><p class="muted">문의를 보내실 때 앱 버전, 기기 모델, Android 버전과 문제가 발생한 순서를 알려주세요. 일기 원본, 비밀번호와 인증 코드는 보내지 마세요.</p></div><h2>기록을 옮기고 싶어요</h2><p>설정의 백업 기능에서 파일을 저장하고, 새 기기에서 복원하세요. 앱을 지우기 전에 백업 파일이 앱 외부에 실제로 저장되었는지 확인해 주세요.</p><h2>계정이나 개인정보를 삭제하고 싶어요</h2><p>계정, 기기 기록, Drive 백업은 저장 위치가 서로 다릅니다. <a href="delete-account.html">계정·데이터 삭제 페이지</a>에서 각각의 방법과 요청 창구를 확인할 수 있습니다.</p><h2>Plus 구독을 관리하고 싶어요</h2><p><a href="https://play.google.com/store/account/subscriptions">Google Play 구독 관리</a>에서 구독 상태와 해지 옵션을 확인하세요. 구매 내역에 있는 Google 계정으로 접속해야 합니다.</p><h2>앱 기능을 먼저 살펴보고 싶어요</h2><p><a href="guide.html">실제 화면 갤러리</a>와 <a href="assets/sample-diary-book.pdf">월별 PDF 예시</a>를 확인해 보세요.</p></article>''')
 (ROOT/'.nojekyll').touch()
 print(f'Generated 6 pages and {len(assets)} optimized previews.')
+
+# Keep the English pages and language links in sync after regeneration.
+from build_english import build as build_english
+build_english()

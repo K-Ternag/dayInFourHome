@@ -8,5 +8,13 @@ window.SITE_CONFIG = {
   deletionTimeframe: '',
   retentionPolicy: '',
   processingRegion: '',
-  policiesApproved: false
+  policiesApproved: false,
+  // 영문 운영 안내. 미설정이면 영문 검토본 안내를 유지합니다.
+  localized: {
+    en: {
+      deletionTimeframe: '',
+      retentionPolicy: '',
+      processingRegion: ''
+    }
+  }
 };

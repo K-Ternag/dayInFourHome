@@ -27,8 +27,16 @@ header .wrap { display: flex; align-items: center; justify-content: space-betwee
 nav { display: flex; gap: 30px; align-items: center; }
 nav a { font-size: 13px; font-weight: 550; text-decoration: none; color: var(--muted); padding: 12px 0; }
 nav a:hover { color: var(--purple); }
-nav a:nth-last-child(2) { padding: 8px 17px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); }
-.menu-toggle { display: none; }
+nav > a[href^="guide"] { padding: 8px 17px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); }
+.language-switch { display: inline-flex; align-items: center; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 9px; white-space: nowrap; }
+.language-switch a { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; min-height: 36px; padding: 5px 8px; border-radius: 6px; font-size: 11px; }
+.language-switch a[aria-current="true"] { background: var(--purple); color: white; }
+html[lang="en"] body { word-break: normal; }
+html[lang="en"] :is(h1, h2, h3) { letter-spacing: -.04em; }
+html[lang="en"] .brand { font-size: 21px; letter-spacing: -.055em; }
+html[lang="en"] .brand small { font-size: 8px; letter-spacing: .13em; }
+html[lang="en"] .hero h1 { font-size: clamp(36px, 3.9vw, 51px); }
+.menu-toggle { display: none; border: 1px solid var(--line); color: var(--ink); background: transparent; border-radius: 10px; padding: 8px 15px; min-height: 44px; font-size: 13px; }
 h1, h2, h3 { line-height: 1.4; font-weight: 700; letter-spacing: -.055em; text-wrap: balance; }
 h1 { font-size: clamp(36px, 3.9vw, 53px); line-height: 1.3; margin: 22px 0 26px; }
 h1 em { font-style: normal; color: var(--purple); }
@@ -158,7 +166,8 @@ dialog p { margin: 12px 0 0; font-size: 13px; }
 #request-status { margin-top: 18px; }
 noscript p { padding: 16px; background: var(--lavender); }
 @media (max-width: 1000px) {
-  nav { gap: 18px; }
+  nav { gap: 12px; }
+  nav > a { font-size: 12px; }
   .hero { gap: 28px; min-height: 610px; }
   .hero-art { gap: 12px; padding-inline: 18px; }
   .hero .actions { flex-direction: column; align-items: flex-start; }
@@ -170,6 +179,11 @@ noscript p { padding: 16px; background: var(--lavender); }
   .mini-steps img { height: 220px; }
   .book-preview { padding: 20px; gap: 12px; }
   .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 900px) {
+  .menu-toggle { display: inline-block; }
+  nav { display: none; position: absolute; top: 84px; left: 0; right: 0; background: var(--paper); padding: 18px 24px; border-bottom: 1px solid var(--line); flex-wrap: wrap; gap: 10px 24px; box-shadow: 0 10px 15px #302c3608; }
+  nav.open { display: flex; }
 }
 @media (max-width: 680px) {
   .wrap { width: calc(100% - 40px); }
@@ -184,6 +198,8 @@ noscript p { padding: 16px; background: var(--lavender); }
   h2 { font-size: 28px; }
   .hero .lead, .lead { font-size: 15px; }
   .hero .eyebrow { font-size: 10px; }
+  html[lang="en"] .hero h1 { font-size: clamp(31px, 8.3vw, 43px); }
+  html[lang="en"] .hero .eyebrow { letter-spacing: .06em; font-size: 9px; }
   .hero .actions { flex-direction: row; align-items: stretch; gap: 8px; margin-top: 22px; }
   .actions .button { padding-inline: 13px; font-size: 11px; min-height: 46px; }
   .hero .muted { font-size: 11px; }
@@ -194,6 +210,8 @@ noscript p { padding: 16px; background: var(--lavender); }
   .hero-art figcaption { font-size: 9px; }
   .ribbon { padding: 16px 4px; border-radius: 12px; }
   .ribbon a { flex-direction: column; gap: 4px; font-size: 10px; text-align: center; padding-inline: 5px; }
+  html[lang="en"] .ribbon a { font-size: 10px; }
+  html[lang="en"] .ribbon b { font-size: 8px; }
   .ribbon b { font-size: 10px; }
   .section { padding-block: 60px; }
   .section-heading { margin-bottom: 28px; }
@@ -202,6 +220,7 @@ noscript p { padding: 16px; background: var(--lavender); }
   .steps article { display: grid; grid-template-columns: minmax(0, 1fr) 106px; grid-template-rows: auto auto 1fr; column-gap: 14px; padding: 22px 18px; align-items: start; }
   .steps .number { grid-column: 1; grid-row: 1; }
   .steps h3 { grid-column: 1; grid-row: 2; font-size: 17px; margin: 14px 0 8px; }
+  html[lang="en"] .steps h3 { font-size: 16px; }
   .steps p { grid-column: 1; grid-row: 3; font-size: 12px; min-height: 0; margin: 0; }
   .steps figure { grid-column: 2; grid-row: 1 / 4; padding: 0; margin: 0; border: 0; align-self: center; }
   .steps .zoom { width: 100%; }

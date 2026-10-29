@@ -41,7 +41,9 @@ $files = @(
     '.gitignore', '.nojekyll', 'README.md', 'app.js', 'assets-data.js', 'assets',
     'browser_check.py', 'build_site.py', 'delete-account.html', 'guide.html',
     'index.html', 'privacy.html', 'site-config.js', 'styles.css', 'support.html',
-    'terms.html', 'verification.json', 'verify_site.py', 'push-home.ps1'
+    'terms.html', 'verification.json', 'verify_site.py', 'push-home.ps1',
+    'index.en.html', 'guide.en.html', 'support.en.html', 'privacy.en.html',
+    'delete-account.en.html', 'terms.en.html', 'build_english.py', 'test_localization.cjs'
 )
 Invoke-Git add -- @files
 & git diff --cached --quiet
