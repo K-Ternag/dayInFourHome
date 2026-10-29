@@ -38,7 +38,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 $files = @(
-    '.gitignore', '.nojekyll', 'README.md', 'app.js', 'assets-data.js', 'assets',
+    '.gitignore', '.nojekyll', 'app-ads.txt', 'README.md', 'app.js', 'assets-data.js', 'assets',
     'browser_check.py', 'build_site.py', 'delete-account.html', 'guide.html',
     'index.html', 'privacy.html', 'site-config.js', 'styles.css', 'support.html',
     'terms.html', 'verification.json', 'verify_site.py', 'push-home.ps1',

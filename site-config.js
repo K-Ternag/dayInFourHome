@@ -3,7 +3,7 @@ window.SITE_CONFIG = {
   developerName: '',
   supportEmail: '',
   playStoreUrl: '',
-  siteUrl: '',
+  siteUrl: 'https://k-ternag.github.io/dayInFourHome/',
   policyEffectiveDate: '',
   deletionTimeframe: '',
   retentionPolicy: '',

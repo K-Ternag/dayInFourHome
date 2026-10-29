@@ -78,3 +78,15 @@
 직접 HTML/CSS/JS를 수정할 수 있습니다. `build_site.py`는 원본 앱의 `marketing/20261028-website-assets`가 있어야 재생성할 수 있는 제작용 스크립트입니다. 실행하면 HTML이 다시 생성되므로 정책 확정 후에는 HTML을 직접 편집하거나 생성기에도 동일 내용을 반영하세요. 사이트 구동에는 Python/Pillow가 필요하지 않습니다.
 
 정적 경로·앵커 검사: `python verify_site.py`. JS 문법 검사: `node --check app.js`. 검증 결과와 브라우저 확인 범위는 `verification.json`을 확인하세요.
+
+## 광고 안내 업데이트 · 2026-10-29
+
+0.8.3의 무료 배너·전면광고 및 Plus 광고 제거를 한국어·영어 소개, 개인정보처리방침과 약관에 반영했다. 생성 스크립트에도 같은 내용을 반영했다.
+
+확인된 공개 홈페이지: https://k-ternag.github.io/dayInFourHome/
+
+이 폴더의 app-ads.txt를 배포하면 /dayInFourHome/app-ads.txt가 된다. AdMob은 https://k-ternag.github.io/app-ads.txt를 확인하므로 **별도 사용자 사이트 저장소 K-Ternag.github.io의 루트에도 같은 파일이 필요하다.** 기존 홈페이지를 옮길 필요는 없다. 이미 사용자 사이트 저장소가 있다면 기존 파일을 보존하며 해당 판매자 행만 추가한다.
+
+공개 정책에는 운영자명·지원 이메일·시행일 등 실제 운영 정보가 여전히 필요하다. 광고 문구 변경만으로 정책 검토 완료 상태로 전환하지 않았다. 공개 사이트 갱신과 AdMob 인증은 별도 단계다.
+
+참고: https://support.google.com/admob/answer/9363762?hl=ko · https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
