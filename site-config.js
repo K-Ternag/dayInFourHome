@@ -2,7 +2,7 @@
 window.SITE_CONFIG = {
   developerName: '',
   supportEmail: '',
-  playStoreUrl: '',
+  playStoreUrl: 'https://play.google.com/store/apps/details?id=com.fourfold.journal',
   siteUrl: 'https://k-ternag.github.io/dayInFourHome/',
   policyEffectiveDate: '',
   deletionTimeframe: '',

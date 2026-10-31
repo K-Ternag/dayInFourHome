@@ -41,7 +41,7 @@
 - `deletionTimeframe`: 본인 확인, 삭제 완료, 회신까지의 기한
 - `retentionPolicy`: 계정/구매/문의/로그별 보관 기간, 삭제 후 서버 백업 소거 기간, 법적 보관이 있다면 근거·항목·기간
 - `processingRegion`: 실제 Supabase 리전, 수탁자·처리 국가 및 적용되는 국외 이전 고지 사항
-- `playStoreUrl`: 실제 공개된 Google Play 앱 URL. 미설정이면 출시 준비 중 표시
+- `playStoreUrl`: 공개된 Google Play 앱 URL. 현재 `com.fourfold.journal` 다운로드 페이지로 연결하며, JavaScript 없이도 첫 화면의 다운로드 링크를 사용할 수 있습니다. 주소를 변경할 때는 `index.html`과 `build_site.py`의 기본 링크도 함께 수정하고 영어 페이지를 재생성하세요.
 - `siteUrl`: 실제 홈페이지 주소 (운영 기록용)
 - `policiesApproved`: 정책 본문과 실제 운영의 일치를 검토한 뒤 `true`. 필수 정보가 모두 있어야 검토본 배너가 사라집니다.
 

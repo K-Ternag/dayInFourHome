@@ -37,7 +37,7 @@ document.querySelectorAll('[data-store]').forEach(el => {
     if (url.protocol !== 'https:' || url.hostname !== 'play.google.com') return;
     const link = document.createElement('a');
     link.href = url.href; link.className = el.className;
-    link.textContent = copy('Google Play에서 만나기', 'Get it on Google Play'); el.replaceWith(link);
+    link.textContent = copy('Google Play에서 다운로드', 'Get it on Google Play'); el.replaceWith(link);
   } catch { /* No published store URL yet. */ }
 });
 const menu = document.querySelector('.menu-toggle');
